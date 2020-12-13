@@ -4,42 +4,33 @@
 
 jQuery.noConflict();
 jQuery(function($) {
-    // mouse events
-    $('#mybtn').click(() => {
-        console.log('Mouse click event occurs');
+    // Hide image
+    $('#btn-hide').click(() => {
+        $('#blog-1').hide(2000, () => console.log('image has been hidden'));
     });
-    // mouse double click events
-    $('.my-btn').dblclick(() => {
-        console.log('Mouse double click event occurs');
+    // show image
+    $('#btn-show').click(() => {
+        $('#blog-1').show(2000, () => console.log('image has been showed'));
     });
-
-    // Mouse Enter events
-    $('.my-btn').mouseenter(() => {
-        console.log('Mouse entered');
-    });
-
-    // Mouse Leave events
-    $('.my-btn').mouseleave(() => {
-        console.log('Mouse leaved');
+    // hide and show -- Toggle
+    $('#btn-toggle').click(() => {
+        $('#blog-1').toggle(2000, () => console.log('image hide/show'));
     });
 
-    // keyboard event
-    $("#name").keypress((e) => console.log(e.type));
-    $("#name").keyup((e) => console.log(e.type));
-    $("#name").keydown((e) => console.log(e.type));
-
-    // form events
-    // focus events
-    $('#fname').focus(() => console.log('focus field'));
-    // blur events
-    $('#fname').blur(() => console.log('blur field'));
-    // submit events
-    $('#myForm').submit((e) => {
-        e.preventDefault();
-        console.log('successfully submitted')
+    // fade out
+    $('#btn-fadeout').click(() => {
+        $('#blog-1').fadeOut(2000);
     });
-
-    // window events
-    $(window).resize(() => console.log('window resized'));
-
+    // fade in
+    $('#btn-fadein').click(() => {
+        $('#blog-1').fadeIn(2000);
+    });
+    // fade TOggle
+    $('#btn-fadetoggle').click(() => {
+        $('#blog-1').fadeToggle(2000);
+    });
+    // fade TO
+    $('#btn-fadeto').click(() => {
+        $('#blog-1').fadeTo(2000, 0.5);
+    });
 });
