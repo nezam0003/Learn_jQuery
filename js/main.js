@@ -23,4 +23,23 @@ jQuery(function($) {
         console.log('Mouse leaved');
     });
 
+    // keyboard event
+    $("#name").keypress((e) => console.log(e.type));
+    $("#name").keyup((e) => console.log(e.type));
+    $("#name").keydown((e) => console.log(e.type));
+
+    // form events
+    // focus events
+    $('#fname').focus(() => console.log('focus field'));
+    // blur events
+    $('#fname').blur(() => console.log('blur field'));
+    // submit events
+    $('#myForm').submit((e) => {
+        e.preventDefault();
+        console.log('successfully submitted')
+    });
+
+    // window events
+    $(window).resize(() => console.log('window resized'));
+
 });
