@@ -4,11 +4,23 @@
 
 jQuery.noConflict();
 jQuery(function($) {
-    // using id selector
-    $("#mybtn").on("click", () => {
-        console.log('id button clicked');
+    // mouse events
+    $('#mybtn').click(() => {
+        console.log('Mouse click event occurs');
     });
-    // using class selector
-    $(".my-btn").on('click', () => console.log("class button clicked"));
-    $('p').on('click', () => console.log("element p clicked"));
+    // mouse double click events
+    $('.my-btn').dblclick(() => {
+        console.log('Mouse double click event occurs');
+    });
+
+    // Mouse Enter events
+    $('.my-btn').mouseenter(() => {
+        console.log('Mouse entered');
+    });
+
+    // Mouse Leave events
+    $('.my-btn').mouseleave(() => {
+        console.log('Mouse leaved');
+    });
+
 });
