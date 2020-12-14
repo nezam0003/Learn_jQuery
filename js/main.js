@@ -50,4 +50,23 @@ jQuery(function($) {
     $("#btn-animate").click(() => {
         $('#blog-2').animate({ left: "+=80" }, 1000);
     });
+
+    // Get text
+    const getText = $('#myP').text();
+    console.log(getText);
+    // set text
+    $('#set-text').click(() => {
+            const newTextData = "this is text setted by jQuery";
+            $('#myP').text(newTextData);
+            // $('#myP').text('this is text setted by jQuery');
+        })
+        // Get HTML
+    const getHTML = $('#myP').html();
+    console.log(getHTML);
+    // set HTML
+    $('#set-html').click(() => {
+        const newHTMLData = "<b>this is text setted by jQuery</b>";
+        $('#myP').html(newHTMLData);
+        // $('#myP').text('this is text setted by jQuery');
+    })
 });
