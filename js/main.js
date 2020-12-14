@@ -33,4 +33,16 @@ jQuery(function($) {
     $('#btn-fadeto').click(() => {
         $('#blog-1').fadeTo(2000, 0.5);
     });
+    // slide down
+    $('#btn-slidedown').click(() => {
+        $('#blog-1').slideDown(1000);
+    });
+    // slide up
+    $('#btn-slideup').click(() => {
+        $('#blog-1').slideUp(1000);
+    });
+    // slide Toggle
+    $('#btn-slidetoggle').click(() => {
+        $('#blog-1').slideToggle(1000);
+    });
 });
