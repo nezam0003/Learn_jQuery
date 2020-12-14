@@ -91,4 +91,17 @@ jQuery(function($) {
     $('#btn-setImage').click(() => {
         $('#blog-1').attr('src', 'images/blog-3.jpg');
     });
+
+    // ADD class
+    $('#btn-addClass').click(() => {
+        $('#myP').addClass('myClass');
+    });
+    // Remove class
+    $('#btn-removeClass').click(() => {
+        $('#myP').removeClass('myClass');
+    });
+    // Toggle class
+    $('#btn-toggleClass').click(() => {
+        $('#myP').toggleClass('myClass');
+    });
 });
