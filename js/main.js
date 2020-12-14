@@ -45,4 +45,9 @@ jQuery(function($) {
     $('#btn-slidetoggle').click(() => {
         $('#blog-1').slideToggle(1000);
     });
+
+    // Animate- perform a custom animation of a set of css properties
+    $("#btn-animate").click(() => {
+        $('#blog-2').animate({ left: "+=80" }, 1000);
+    });
 });
