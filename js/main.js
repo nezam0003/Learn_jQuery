@@ -68,5 +68,27 @@ jQuery(function($) {
         const newHTMLData = "<b>this is text setted by jQuery</b>";
         $('#myP').html(newHTMLData);
         // $('#myP').text('this is text setted by jQuery');
-    })
+    });
+    // Get value from input field
+    const inputValue = $('#input-text').val();
+    console.log(inputValue);
+    // set input values
+    $('#btn-setInputValue').click(() => {
+        const newInputValue = 'fhameed';
+        $('#input-text').val(newInputValue);
+    });
+    // Get atrribute value
+    const attrValue = $('#input-text').attr('data-id');
+    console.log(attrValue);
+
+    // Set attributes values
+    $('#btn-setAttribute').click(() => {
+        $('#input-text').attr('data-id', '20');
+        console.log('new attribute value: ', $('#input-text').attr('data-id'));
+    });
+
+    // set image by attribute values
+    $('#btn-setImage').click(() => {
+        $('#blog-1').attr('src', 'images/blog-3.jpg');
+    });
 });
